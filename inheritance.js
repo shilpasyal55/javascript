@@ -30,7 +30,7 @@ Robot.wifi = function() {
     this.talk(this.name, "wifi" , "connecting");
 }
 
-const sam = Object.create(Human,{name: {value: "sam"}});
-sam.walk();
-sam.eat();
-sam.talk("hello from sam");
+const xyz = Object.create(Human,{name: {value: "xyz"}});
+xyz.walk();
+xyz.eat();
+xyz.talk("hello from xyz");
