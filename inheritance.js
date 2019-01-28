@@ -19,7 +19,7 @@ Human.eat = function() {
 
 const Robot = Object.create(Character,{
     speed: {value: 5},
-    id: { value: "T123"}
+    id: { value: "123"}
 })
 
 Robot.drive = function() {
@@ -30,7 +30,12 @@ Robot.wifi = function() {
     this.talk(this.name, "wifi" , "connecting");
 }
 
-const sam = Object.create(Human,{name: {value: "sam"}});
-sam.walk();
-sam.eat();
-sam.talk("hello from sam");
+const xyz = Object.create(Human,{name: {value: "xyz"}});
+xyz.walk();
+xyz.eat();
+xyz.talk("hello from xyz");
+
+const robo = Object.create(Robot,{name: {value: "robo"}});
+robo.drive();
+robo.wifi();
+robo.talk("hello from robo");

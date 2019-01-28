@@ -21,17 +21,4 @@ console.log(multiplyArrow(4,2));
     console.log(num1 * num2);
 })(6,8);
 
-class User {
-    constructor ({userName, avatar}) {
-      this.userName = userName;
-      this.avatar = avatar;
-    }
-  }
-  const currentUser = new User({
-    userName: 'Foo',
-    avatar: 'foo.png'
-  });
-
-User.prototype = {}
-  console.log(currentUser instanceof User);
 

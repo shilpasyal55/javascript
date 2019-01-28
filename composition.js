@@ -1,32 +1,45 @@
-const canFight = (state) => ({
-    fight: () => {
-        console.log(`${state.name} takes a mighty swing!`);
-        state.stamina--;
+const canTalk = (state) => ({
+    talk: () => {
+        console.log(`${state.name} is talking`);
     }
 })
-const canCast = (state) => ({
-    cast: () => {
-        console.log(`${state.name} casts a fireball`);
-        state.mana--;
-    }
-})
-
-const canSpell = (state) => ({
-    spell: () => {
-        console.log(`${state.name} spells a fire!`);
-        state.stamina--;
+const canEat = (state) => ({
+    eat: () => {
+        console.log(`${state.name} is eating something`);
     }
 })
 
-const Fighter = (name,stamina = 100) => {
+const canConnect = (state) => ({
+    connect: () => {
+        console.log(`${state.name} is connecting to wifi`);
+    }
+})
+
+const canDrive = (state) => ({
+    drive: () => {
+        console.log(`${state.name} is driving a car`);
+    }
+})
+
+const Human = (name) => {
     let state = {
-        name,
-        stamina
+        name
     }
-
-    return Object.assign(state,canFight(state))
+    return Object.assign(state,canTalk(state),canEat(state),canDrive(state))
 }
 
-const zapper = Fighter("zapper");
-zapper.fight();
-console.log(zapper.stamina)
+const Robot = (name) => {
+    let state = {
+        name
+    }
+    return Object.assign(state,canTalk(state),canConnect(state),canDrive(state))
+}
+
+const xyz = Human("xyz");
+xyz.eat();
+xyz.drive();
+
+const robo = Robot("robo");
+robo.connect();
+robo.talk();
+
