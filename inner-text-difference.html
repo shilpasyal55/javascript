@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Code Vibes Javascript</title>
+</head>
+<body>
+        <p id="para">    This element    contains <span>an inner span</span>. </p>
+
+        <script>
+        // Just the text, trimmed and space-collapsed.
+        console.log(document.querySelector('#para').innerText) // "This element contains an inner span."
+        
+        //All spacing and inner element tags.
+        console.log(document.getElementById('para').innerHTML) //" This element     contains <span>an inner span</span>. "
+        
+        //Spacing, but no tags.
+        console.log(document.getElementById('para').textContent)  //" This element     contains an inner span. " 
+        </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div id="div0" class="blue">Blue</div>
+        <div id="div1" class="red">Red</div>
+        <div id="div2" class="green">Green</div>
+    <script>
+         
+
+
+        // storing all the elements with class "blue" using the two methods
+var aux1 = document.querySelectorAll(".blue");
+var aux2 = document.getElementsByClassName("blue");
+
+// write the number of elements in each array (values match)
+console.log("Number of elements with querySelectorAll = " + aux1.length);
+console.log("Number of elements with getElementsByClassName = " + aux2.length);
+
+// change one element's class to "blue"
+document.getElementById("div1").className = "blue";
+
+// write the number of elements in each array (values differ)
+console.log("Number of elements with querySelectorAll = " + aux1.length);
+console.log("Number of elements with getElementsByClassName = " + aux2.length);   
+    </script>
+</body>
+</html>
