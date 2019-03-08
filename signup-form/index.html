@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Signup form</title>
+    <style>
+        input[type=text],input[type=number],input[type=email],input[type=password] {
+            width: 40%;
+            height: 36px;
+        }
+        
+
+        p > label:first-child{
+            float: left;
+            clear: left;
+            width: 150px;
+        }
+
+        button {
+            width: 43%;
+            height: 32px;
+            margin-left: 147px;
+            background: black;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        span{
+            color: #f00;
+            font-size: 20px;
+        }
+
+        form{
+            background-color:#e6ee9c;
+            box-shadow: 5px 10px 18px #888888;
+            width: 50%;
+            margin-left: 25%;
+            margin-top: 5%;
+        }
+    </style>
+</head>
+<body>
+    <form class="myform">
+        <fieldset>
+            <legend><h2>Register yourself</h2></legend>
+            <p>
+                <label for="n1">Username</label>
+                <input name="username" type="text" placeholder="Username">
+                <span id="username_error"></span> 
+            </p>
+            <p>
+                <label for="n2">Email</label>
+                <input name="email" type="email" placeholer="Email">
+                <span id="email_error"></span>
+            </p>
+            <p>
+                <label for="n3">Password</label>
+                <input name="password" type="password" placeholder="Password" minlength="6" maxlength="10">
+                <span id="password_error"></span>
+            </p>
+            <p>
+                <label for="n4">Age</label>
+                <input name="age" type="number" placeholder="Age" min="1" max="50">
+                <span id="age_error"></span>
+            </p>
+            <p>
+                <label>Gender</label>
+                <input type="radio" name="gender" id="male" checked>
+                <label for="n5">Male</label>
+                <input type="radio" name="gender" id="female">
+                <label for="n6">Female</label>
+            </p>
+            <button type="submit">Signup</button>
+        </fieldset>
+    </form>
+    <script src="main.js"></script>
+</body>
+</html>

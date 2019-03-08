@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>First Child Element</title>
+</head>
+<body>
+    <div id="myDiv">
+        <p>Hi i am paragraph</p>
+        <span>This is span</span>
+    </div>
+
+    <div id="div2"><span>Hi i am second span</span></div>
+    <script>
+        let div = document.getElementById("myDiv");
+        console.log(div.firstChild.nodeName)
+        console.log(div.firstElementChild.nodeType)
+
+        let div2 = document.getElementById("div2");
+        console.log(div2.firstChild.nodeName);
+    </script>
+</body>
+</html>
