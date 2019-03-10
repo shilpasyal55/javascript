@@ -1,3 +1,13 @@
+var forms = document.querySelectorAll(".validate");
+for(var i = 0; i< forms.length;i++){
+    forms[i].setAttribute('novalidate',true);
+}
+
+let username = document.getElementById("username");
+
+username.addEventListener('change',function() {
+    console.log(username.validity)
+})
 document.querySelector(".myform").addEventListener('submit',(event) => {
     event.preventDefault();
     let form = event.target;
@@ -5,6 +15,8 @@ document.querySelector(".myform").addEventListener('submit',(event) => {
     let email = form.email;
     let password = form.password;
     let age = form.age;
+    console.log(form.gender.value);
+    
 
     if(username.value == ''){
         username.style.border = "dotted 3px red"
@@ -27,3 +39,12 @@ document.querySelector(".myform").addEventListener('submit',(event) => {
         location.href = 'welcome.html'
     }
 })
+
+
+// Another way to get values from form
+// document.forms["myform"]["gender"].value
+//var signupform  = document.forms.myform
+// signupform.elements.email
+
+// var v = document.querySelector("input")
+// var validityState = v.validity;

@@ -11,11 +11,11 @@
             height: 36px;
         }
         
-
         p > label:first-child{
             float: left;
             clear: left;
             width: 150px;
+            font-weight: bold;
         }
 
         button {
@@ -28,6 +28,7 @@
             border-radius: 15px;
             cursor: pointer;
         }
+        
 
         span{
             color: #f00;
@@ -44,17 +45,17 @@
     </style>
 </head>
 <body>
-    <form class="myform">
+    <form class="myform validate" id="myform">
         <fieldset>
             <legend><h2>Register yourself</h2></legend>
             <p>
                 <label for="n1">Username</label>
-                <input name="username" type="text" placeholder="Username">
+                <input name="username" id="username" type="text" placeholder="Username" required>
                 <span id="username_error"></span> 
             </p>
             <p>
                 <label for="n2">Email</label>
-                <input name="email" type="email" placeholer="Email">
+                <input name="email" type="email" placeholer="Email" required>
                 <span id="email_error"></span>
             </p>
             <p>
@@ -64,15 +65,15 @@
             </p>
             <p>
                 <label for="n4">Age</label>
-                <input name="age" type="number" placeholder="Age" min="1" max="50">
+                <input name="age" id="age" type="number" placeholder="Age" min="1" max="50">
                 <span id="age_error"></span>
             </p>
             <p>
                 <label>Gender</label>
-                <input type="radio" name="gender" id="male" checked>
-                <label for="n5">Male</label>
-                <input type="radio" name="gender" id="female">
-                <label for="n6">Female</label>
+                <input value="male" type="radio" name="gender" id="male" checked>
+                <label for="male">Male</label>
+                <input value="female" type="radio" name="gender" id="female">
+                <label for="female">Female</label>
             </p>
             <button type="submit">Signup</button>
         </fieldset>
