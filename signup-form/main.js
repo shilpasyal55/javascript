@@ -1,13 +1,3 @@
-var forms = document.querySelectorAll(".validate");
-for(var i = 0; i< forms.length;i++){
-    forms[i].setAttribute('novalidate',true);
-}
-
-let username = document.getElementById("username");
-
-username.addEventListener('change',function() {
-    console.log(username.validity)
-})
 document.querySelector(".myform").addEventListener('submit',(event) => {
     event.preventDefault();
     let form = event.target;
